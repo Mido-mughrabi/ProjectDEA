@@ -1,0 +1,5 @@
+segma={m,k,l}
+states={S0,S1,S2}
+function={(S0,m,S1),(S0,k,S2),(S1,m,S11)}
+start=S0
+endStates={S2,S11}

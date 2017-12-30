@@ -1,0 +1,1 @@
+javac *.java && java Main test.dea
