@@ -3,7 +3,6 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package dea;
 
 /**
  *
@@ -98,7 +97,7 @@ public class DEA extends Application {
         hashtable(function);
         Circle []Cir = new Circle[8];
         
-        Circle []Cir1=new_CircleArray(anzahl);
+        Circle []Cir1=new_CircleArray(200);
         
         Polygon []pol = new Polygon[4];
         Label []Lab = new Label[13];
