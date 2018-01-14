@@ -42,6 +42,18 @@ public class ExecGraph
 				}
 			}
 		}
+		
+		//toDo: not an optimal solution 
+		for(Edge e: edges)
+		{
+			for(String s: ends)
+			{
+				if(e.end.content.equals(s))
+				{
+					e.end.setEnd(true);
+				}
+			}
+		}
 	}
 	
 	public Node nextMove(Node start, String input)
@@ -73,6 +85,16 @@ public class ExecGraph
 	public void reset()
 	{
 		pointer = start;
+	}
+	
+	public String toString()
+	{
+		String s = "" ;
+		for(Node n : nodes)
+		{
+			s = s + " " + n.content + " " + n.isEnd + "\n" ;
+		}
+		return s ;
 	}
 }
 
