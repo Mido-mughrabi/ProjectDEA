@@ -70,7 +70,9 @@ public class ExecGraph
 	
 	public void makeMove(String input)
 	{
-		Node next = nextMove(pointer,input);
+		Node next = null;
+		next = nextMove(pointer, input);
+
 		if (next != null)
 		{
 			pointer = next;
@@ -79,6 +81,18 @@ public class ExecGraph
 		{
 			System.out.println("can not make this move !");
 			System.exit(0);
+		}
+	}
+
+	public void makeMoves(List inputs){
+		Iterator<String> iter = inputs.iterator();
+		while(iter.hasNext())
+		{
+			String s = iter.next();
+			if(s != null)
+			{
+				makeMove(s);
+			}
 		}
 	}
 	
